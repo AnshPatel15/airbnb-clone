@@ -39,11 +39,13 @@ export default async function getListings(params: IListingsParams) {
         gte: +roomCount,
       };
     }
+
     if (guestCount) {
       query.guestCount = {
         gte: +guestCount,
       };
     }
+
     if (bathroomCount) {
       query.bathroomCount = {
         gte: +bathroomCount,
@@ -79,12 +81,13 @@ export default async function getListings(params: IListingsParams) {
         createdAt: "desc",
       },
     });
-    const safeListing = listings.map((listing) => ({
+
+    const safeListings = listings.map((listing) => ({
       ...listing,
       createdAt: listing.createdAt.toISOString(),
     }));
 
-    return safeListing;
+    return safeListings;
   } catch (error: any) {
     throw new Error(error);
   }
