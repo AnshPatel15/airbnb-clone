@@ -50,4 +50,4 @@ Acknowledgements
 
 This project was inspired by the functionality and design of Airbnb. Special thanks to the developers and contributors of the open-source libraries used in this project.
 
-Disclaimer: This is a clone application for educational purposes only. It is not intended for commercial use or to replicate Airbnb's production system. add git
+Disclaimer: This is a clone application for educational purposes only. It is not intended for commercial use or to replicate Airbnb's production system.
