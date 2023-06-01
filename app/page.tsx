@@ -13,6 +13,11 @@ const Home = async ({ searchParams }: HomeProps) => {
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
 
+  if (!searchParams.userId) {
+    // Handle the case where `userId` is missing in `searchParams`
+    return <div>Invalid search parameters</div>;
+  }
+
   if (listings.length === 0) {
     return (
       <ClientOnly>
